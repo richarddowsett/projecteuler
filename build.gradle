@@ -1,0 +1,20 @@
+group 'euler'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: 'idea'
+
+ext.scala_version = "2.12.4"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:$scala_version"
+    compile group: 'commons-io', name: 'commons-io', version: '2.0.1'
+    testCompile 'org.scalatest:scalatest_2.12:3.0.4'
+    testCompile 'junit:junit:4.12'
+}
